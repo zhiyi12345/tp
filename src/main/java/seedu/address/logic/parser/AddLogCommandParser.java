@@ -1,7 +1,7 @@
 package seedu.address.logic.parser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.commands.AddLogCommand.MESSAGE_INVALID_ID;
+import static seedu.address.logic.commands.AddLogCommand.MESSAGE_PERSON_NOT_FOUND;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_DATE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_IDENTITY_NUMBER;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_LOG;
@@ -43,7 +43,7 @@ public class AddLogCommandParser implements Parser<AddLogCommand> {
             identityNumber = ParserUtil.parseIdentityNumber(
                     argMultimap.getValue(PREFIX_IDENTITY_NUMBER).get());
         } catch (ParseException pe) {
-            throw new ParseException(MESSAGE_INVALID_ID);
+            throw new ParseException(MESSAGE_PERSON_NOT_FOUND);
         }
 
         // Parse date

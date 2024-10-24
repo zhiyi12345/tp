@@ -27,9 +27,7 @@ public class AddLogCommand extends Command {
             + "Example: " + COMMAND_WORD + " i/S1234567A d/20 Oct 2024 l/First visit to the clinic\n";
 
     public static final String MESSAGE_ADD_LOG_SUCCESS = "Added log for Person: %1$s";
-    public static final String MESSAGE_PERSON_NOT_FOUND = "Person with ID %1$s not found.";
-    public static final String MESSAGE_INVALID_ID = "NRIC not found in system, perhaps there was a typo.";
-
+    public static final String MESSAGE_PERSON_NOT_FOUND = "NRIC: %1$s not found in system, perhaps there was a typo.";
 
     private final IdentityNumber identityNumber;
     private final Log log;
